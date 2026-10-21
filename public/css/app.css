@@ -1,0 +1,110 @@
+:root {
+    --sidebar-width: 230px;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    min-height: calc(100vh - 56px);
+    border-right: 1px solid var(--bs-border-color);
+}
+
+.sidebar .nav-link {
+    color: var(--bs-body-color);
+    border-radius: .375rem;
+    padding: .5rem .75rem;
+}
+
+.sidebar .nav-link.active {
+    background-color: var(--bs-primary);
+    color: #fff;
+}
+
+.sidebar .nav-link:hover:not(.active) {
+    background-color: var(--bs-secondary-bg);
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Modal en modo oscuro */
+[data-bs-theme="dark"] .modal-content {
+    background-color: #2d3238;
+    color: #dee2e6;
+    border-color: #495057;
+}
+
+[data-bs-theme="dark"] .modal-header {
+    border-color: #495057;
+    background-color: #343a40;
+}
+
+[data-bs-theme="dark"] .modal-footer {
+    border-color: #495057;
+    background-color: #343a40;
+}
+
+/* Inputs en modo oscuro */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+    background-color: #3d4349;
+    color: #dee2e6;
+    border-color: #6c757d;
+}
+
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus {
+    background-color: #3d4349;
+    color: #dee2e6;
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(134, 183, 254, 0.15);
+}
+
+/* Placeholder más oscuro para que no se confunda con el texto */
+[data-bs-theme="dark"] .form-control::placeholder,
+[data-bs-theme="dark"] .form-select::placeholder {
+    color: #9ba3aa;
+    opacity: 1;
+}
+
+/* Input group */
+[data-bs-theme="dark"] .input-group-text {
+    background-color: #3d4349;
+    color: #dee2e6;
+    border-color: #6c757d;
+}
+
+/* Labels */
+[data-bs-theme="dark"] .form-label {
+    color: #ced4da;
+}
+
+[data-bs-theme="dark"] form.shadow {
+    background-color: #2d3238 !important;
+    color: #dee2e6;
+}
+
+[data-bs-theme="dark"] form.shadow .form-control,
+[data-bs-theme="dark"] form.shadow .form-select {
+    background-color: #3d4349 !important;
+    color: #dee2e6 !important;
+    border-color: #6c757d !important;
+}
+
+[data-bs-theme="dark"] form.shadow .form-control::placeholder {
+    color: #9ba3aa !important;
+    opacity: 1;
+}
+/* bhbbjkbjkhbkjkjjkjk~`` */
+[data-bs-theme="dark"] form.shadow .form-label {
+    color: #ced4da !important;
+}
+
+[data-bs-theme="dark"] form.shadow .form-check-label {
+    color: #ced4da !important;
+}

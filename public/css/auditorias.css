@@ -1,0 +1,33 @@
+.cambios-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr;
+    gap: .25rem .5rem;
+    align-items: center;
+    font-size: .8rem;
+    background: var(--bs-secondary-bg);
+    border-radius: .375rem;
+    padding: .5rem .75rem;
+    min-width: 280px;
+}
+
+.cambios-campo {
+    font-weight: 600;
+    color: var(--bs-secondary-color);
+    white-space: nowrap;
+}
+
+.cambios-antes {
+    color: var(--bs-danger);
+    text-decoration: line-through;
+    word-break: break-all;
+}
+
+.cambios-flecha {
+    color: var(--bs-secondary-color);
+    text-align: center;
+}
+
+.cambios-despues {
+    color: var(--bs-success);
+    word-break: break-all;
+}

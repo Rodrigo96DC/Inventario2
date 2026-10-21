@@ -1,0 +1,94 @@
+/* Panel funcionario */
+.panel-funcionario {
+    position: sticky;
+    top: 72px;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+}
+
+.avatar-lg {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+}
+
+/* Tarjetas equipos disponibles */
+.equipo-card {
+    cursor: pointer;
+    transition: box-shadow .2s, border-color .2s;
+    border: 2px solid transparent;
+}
+
+.equipo-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,.15);
+}
+
+.equipo-card.seleccionado {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), .2);
+}
+
+.equipo-card .check-overlay {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--bs-primary);
+    color: #fff;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: .75rem;
+    z-index: 5;
+}
+
+.equipo-card.seleccionado .check-overlay {
+    display: flex;
+}
+
+/* Barra de acción flotante */
+#barra-accion {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom .3s ease;
+    z-index: 1050;
+    min-width: 400px;
+}
+
+#barra-accion.visible {
+    bottom: 24px;
+}
+
+/* Imagen wrapper en tarjetas asignacion */
+.card-img-wrapper {
+    overflow: visible !important;
+    height: 160px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: zoom-in;
+    transition: all 0.2s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.card-img-wrapper.zoom-activo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    z-index: 999;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    border-radius: .375rem;
+}
